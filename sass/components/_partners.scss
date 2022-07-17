@@ -1,16 +1,26 @@
 .partners__list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
 }
 
 
 .partners__item {
+    width: 100%;
     display: block;
-    margin-right: 30px;
-    &:last-child {
-            margin-right: 0;
-        }
-}
+    width: calc((100% - 30px)/2);
 
+        @include tablet {
+            width: calc((100% - 60px)/3);
+        }
+
+        @include desktop {
+            width: calc((100% - 150px)/6);
+            
+        }
+  
+    }
 
 
 .partners__link {
@@ -18,7 +28,7 @@
     justify-content: center;
     align-items: center;
 
-    width: 170px;
+    width: 100%;
     height: 92px;
     border: 1px solid var(--logo-color);
     border-radius: 4px;
@@ -33,5 +43,6 @@
         .partners__link:focus & {
             fill: var(--accent-color);
         }
-}
+    
+    }
 

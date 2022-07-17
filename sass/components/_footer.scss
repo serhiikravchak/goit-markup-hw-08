@@ -1,22 +1,38 @@
 .footer {
     background-color: var(--background-color);
     padding: 60px 15px;
-    display: flex;
+    
     justify-content: flex-start;
     align-items: baseline;
+
+    // @include tablet {
+    //     flex-wrap: wrap;
+    //     gap
+    // }
 }
 
 
-.footer .container {
-    display: flex;
+.footer-container {
     align-items: baseline;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center; 
+
 }
 
 
 .logo.bottom {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 20px;
+padding-top: 0;
+padding-bottom: 0;
+margin-bottom: 20px;
+justify-content: center;
+
+// @include mobile-max{
+//     display: flex;
+//     justify-content: center;
+// }
+
 }
 
 .logo-bottom {
@@ -25,7 +41,18 @@
 
 .address {
     font-style: normal;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    
 }
+
+// .address-container{
+//     @include tablet{
+//         margin-left: 76px;
+//         margin-right: 165px;
+//     }
+// }
 
 .address__text {
     margin-top: 0;
@@ -54,11 +81,20 @@
 
 
 .soc {
-    margin-left: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+
+   
+
+    @include desktop{
+     margin-left: 70px;
+    }
 }
 
 .soc__list {
     display: flex;
+    justify-content: center;
 }
 
 .soc__title {
@@ -90,6 +126,7 @@
 }
 
 .soc__link {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,6 +144,12 @@
 
 .connect {
     margin-left: auto;
+    margin-right: auto;
+    
+
+    @include desktop {
+        margin-left: auto;
+    }
 }
 
 .connect__title {
@@ -122,17 +165,22 @@
 }
 
 .connect__form {
-    display: flex;
+    width: 100%;
+   
+    @include desktop {
+        display: flex;
+    }
+    
 }
 
 .connect__input {
-    display: block;
-    width: 358px;
+    display: block;    
     height: 50px;
-
-    margin-right: 12px;
-
-
+    width: 100%;
+    max-width: 450px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -147,11 +195,18 @@
             letter-spacing: 0.03em;
             color: rgba(255, 255, 255, 0.6);
         }
+
+        @include desktop {
+        width: 358px;
+        margin-right: 12px;
+        }
 }
 
 
 
 .connect__btn {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
     min-width: 200px;

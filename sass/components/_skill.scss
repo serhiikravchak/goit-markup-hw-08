@@ -1,4 +1,12 @@
-.skill.section {
+.skills.section {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
+}
+
+.skills .container{
     padding-top: 0;
 }
 
