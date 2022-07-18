@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-    <!-- <header class="header-page">
+    <header class="header-page">
         <div class="container main-nav">
         <nav class="nav">
         <a lang="en" href="./index.html" class="logo link">Web<span class="nav__logo">Studio</span></a>
@@ -44,9 +44,53 @@
                     </svg>
                     +38 096 111 11 11</a>
             </li>
-        </ul>       
+        </ul>
+        <button type="button" class="menu-open-btn btn"><svg class="menu-btn" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-menu-open"></use>
+            </svg>
+        </button>
         </div>
-    </header> -->
+        <div class="mob-menu is-hidden">
+            <div class="mob-container">
+                 <div class="mob-menu-top">
+                        <button type="button" class="menu-close-btn btn">
+                            <svg class="menu-btn" width="40px" height="40px">
+                                <use href="./images/icons.svg#icon-menu-close"></use>
+                            </svg>
+                        </button> 
+                        <ul class="mob-menu__list list">
+                            <li class="mob-menu__item">
+                                <a href="./index.html" class="mob-menu__link link mob-menu__link--current">Студия</a>
+                            </li>
+                            <li class="mob-menu__item">
+                                <a href="./portfolio.html" class="mob-menu__link link">Портфолио</a>
+                            </li>
+                            <li class="mob-menu__item">
+                                <a href="" class="mob-menu__link link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mob-menu-bottom">
+                        <a href="callto:+380961111111" class="mob-tel__link link">+38 096 111 11 11</a>
+                        <a href="mailto:info@devstudio.com" class="mob-mail__link link">info@devstudio.com</a>
+                        <ul class="mob-soc__list list">
+                            <li class="mob-soc__item">
+                                <a href="" class="mob-soc__link link">Instagram</a>
+                            </li>
+                            <li class="mob-soc__item">
+                                <a href="" class="mob-soc__link link">Twitter</a>
+                            </li>
+                            <li class="mob-soc__item">
+                                <a href="" class="mob-soc__link link">Facebook</a>
+                            </li>
+                            <li class="mob-soc__item">
+                                <a href="" class="mob-soc__link link">Linkedin</a>
+                            </li>
+                        </ul>
+                    </div>        
+            </div>
+        </div>
+    </header>
     <main>
          <section class="hero">
             <div class="container">
@@ -104,7 +148,11 @@
             <ul class="skill__list list">
                 <li class="skill__item">
                     <div class="skill__thumb">
-                        <img class="skill__img" src="./images/skills-coding-1.jpg" alt="Програмист пишет код" width="370" height="294">
+                        <img srcset="
+                        ./images/skills-coding-1.jpg 1x,
+                        ./images/skills-coding-1-2x.jpg 2x
+                        " 
+                        class="skill__img" src="./images/skills-coding-1.jpg" alt="Програмист пишет код" width="370" height="294">
                         <div class="skill__overlay">
                             <p class="skill__description">Десктопные приложения</p>
                         </div>
@@ -112,7 +160,11 @@
                 </li>
                 <li class="skill__item">
                     <div class="skill__thumb">
-                        <img class="skill__img" src="./images/skills-mobile-app-2.jpg" alt="Програмист пишет мобильное приложение" width="370" height="294">
+                        <img srcset="
+                        ./images/skills-mobile-app-2.jpg 1x,
+                        ./images/skills-mobile-app-2-2x.jpg 2x
+                        "  
+                        class="skill__img" src="./images/skills-mobile-app-2.jpg" alt="Програмист пишет мобильное приложение" width="370" height="294">
                         <div class="skill__overlay">
                             <p class="skill__description">Мобильные приложения</p>
                         </div>                            
@@ -120,7 +172,11 @@
                 </li>
                 <li class="skill__item">
                     <div class="skill__thumb">
-                        <img class="skill__img" src="./images/skills-design-3.jpg" alt="Дизайнер рисует" width="370" height="294">
+                        <img srcset="
+                        ./images/skills-design-3.jpg 1x,
+                        ./images/skills-design-3-2x.jpg 2x
+                        " 
+                         class="skill__img" src="./images/skills-design-3.jpg" alt="Дизайнер рисует" width="370" height="294">
                         <div class="skill__overlay">
                             <p class="skill__description">Дизайнерские решения</p>
                         </div>
@@ -134,7 +190,24 @@
            <h2 class="team__title title">Наша команда</h2>
             <ul class="teammate list">
                 <li class="teammate__item">
-                    <img class="teammate__card" src="./images/team-card-1.jpg" alt="Фото Игоря Демьяненко" width="270" height="260">
+                    <picture>
+                        <source srcset="
+                        ./images/team-card-1.jpg 1x,
+                        ./images/team-card-1-2x.jpg 2x
+                        " 
+                        media="(min-width: 1200px)"
+                         />
+                        <source srcset="
+                                                ./images/team-card-1-tab.jpg 1x,
+                                                ./images/team-card-1-tab-2x.jpg 2x
+                                                " media="(min-width: 768px)" />
+                                                <source srcset="
+                                                                        ./images/team-card-1-mob.jpg 1x,
+                                                                        ./images/team-card-1-mob-2x.jpg 2x
+                                                                        " media="(min-width: 480px)" />
+                        <img class="teammate__card" src="./images/team-card-1.jpg" alt="Фото Игоря Демьяненко" width="270" height="260">
+                    </picture>
+                    
                     <div class="container">
                         <h3 class="teammate__name">Игорь Демьяненко</h3>
                         <p lang="en" class="teammate__text">Product Designer</p>
@@ -171,7 +244,22 @@
                     </div>
                 </li>
                 <li class="teammate__item">
-                    <img class="teammate__card" src="./images/team-card-2.jpg" alt="Фото Ольги Репиной" width="270" height="260">
+                    <picture>
+                        <source srcset="
+                                                ./images/team-card-2.jpg 1x,
+                                                ./images/team-card-2-2x.jpg 2x
+                                                " media="(min-width: 1200px)" />
+                        <source srcset="
+                                                                        ./images/team-card-2-tab.jpg 1x,
+                                                                        ./images/team-card-2-tab-2x.jpg 2x
+                                                                        " media="(min-width: 768px)" />
+                        <source srcset="
+                                                                                                ./images/team-card-2-mob.jpg 1x,
+                                                                                                ./images/team-card-2-mob-2x.jpg 2x
+                                                                                                " media="(min-width: 480px)" />
+                        <img class="teammate__card" src="./images/team-card-2.jpg" alt="Фото Ольги Репиной" width="270" height="260">
+                    </picture>
+                    
                     <div class="container">
                         <h3 class="teammate__name">Ольга Репина</h3>
                         <p lang="en" class="teammate__text">Frontend Developer</p>
@@ -208,7 +296,23 @@
                     </div>
                 </li>
                 <li class="teammate__item">
-                    <img class="teammate__card" src="./images/team-card-3.jpg" alt="Фото Николая Тарасова" width="270" height="260">
+                    <picture>
+                        <source srcset="
+                                                                        ./images/team-card-3.jpg 1x,
+                                                                        ./images/team-card-3-2x.jpg 2x
+                                                                        " media="(min-width: 1200px)" />
+                        <source srcset="
+                                                                                                ./images/team-card-3-tab.jpg 1x,
+                                                                                                ./images/team-card-3-tab-2x.jpg 2x
+                                                                                                " media="(min-width: 768px)" />
+                        <source srcset="
+                                                                                                                        ./images/team-card-3-mob.jpg 1x,
+                                                                                                                        ./images/team-card-3-mob-2x.jpg 2x
+                                                                                                                        "
+                            media="(min-width: 480px)" />
+                        <img class="teammate__card" src="./images/team-card-3.jpg" alt="Фото Николая Тарасова" width="270" height="260">
+                    </picture>
+                    
                     <div class="container">
                         <h3 class="teammate__name">Николай Тарасов</h3>
                         <p lang="en" class="teammate__text">Marketing</p>
@@ -245,7 +349,26 @@
                     </div>
                     </li>
                 <li class="teammate__item">
-                    <img class="teammate__card" src="./images/team-card-4.jpg" alt="Фото Михаила Ермакова" width="270" height="260">
+                    <picture>
+                        <source srcset="
+                                                                                                ./images/team-card-4.jpg 1x,
+                                                                                                ./images/team-card-4-2x.jpg 2x
+                                                                                                " media="(min-width: 1200px)" />
+                        <source srcset="
+                                                                                                                        ./images/team-card-4-tab.jpg 1x,
+                                                                                                                        ./images/team-card-4-tab-2x.jpg 2x
+                                                                                                                        "
+                            media="(min-width: 768px)" />
+                        <source
+                            srcset="
+                                                                                                                                                ./images/team-card-4-mob.jpg 1x,
+                                                                                                                                                ./images/team-card-4-mob-2x.jpg 2x
+                                                                                                                                                "
+                            media="(min-width: 480px)" />
+                        
+                        <img class="teammate__card" src="./images/team-card-4.jpg" alt="Фото Михаила Ермакова" width="270" height="260">
+                    </picture>
+                    
                     <div class="container">
                         <h3 class="teammate__name">Михаил Еркмаков</h3>
                         <p lang="en" class="teammate__text">UI Designer</p>
@@ -335,7 +458,7 @@
         </section> 
     </main>
     <footer class="footer">
-        <div class="footer-container">
+        <div class="footer-container container">
         <div class="address-container">
             <a lang="en" href="./index.html" class="logo bottom link ">Web<span class="logo-bottom">Studio</span></a>
         <address class="address">
@@ -399,7 +522,7 @@
         </div>
     </div>
     </footer>
-    <!-- <div data-modal class="backdrop is-hidden">
+    <div data-modal class="backdrop is-hidden">
         <div class="modal">
         <button type="button" class="close-btn btn" data-modal-close>
             <svg class="close-icon" width="18px" height="18px">
@@ -449,8 +572,9 @@
             <button type="submit" class="modal-submit btn">Отправить</button>
         </div>     
      </div>
-    </div> -->
+    </div>
     
+<script src="./js/menu.js"></script>
  <script src="./js/modal.js"></script>
 </body>
 </html>

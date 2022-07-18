@@ -12,41 +12,85 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-        <header class="header-page">
-            <div class="container main-nav">
-                <nav class="nav">
-                    <a lang="en" href="./index.html" class="logo link">Web<span class="nav__logo">Studio</span></a>
-                    <ul class="menu list">
-                        <li class="menu__item">
-                            <a href="./index.html" class="menu__link link">Студия</a>
+            <header class="header-page">
+                <div class="container main-nav">
+                    <nav class="nav">
+                        <a lang="en" href="./index.html" class="logo link">Web<span class="nav__logo">Studio</span></a>
+                        <ul class="menu list">
+                            <li class="menu__item">
+                                <a href="./index.html" class="menu__link link menu__link--current">Студия</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="./portfolio.html" class="menu__link link">Портфолио</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+            
+                    <ul class="contact list">
+                        <li class="contact__item">
+                            <a href="mailto:info@devstudio.com" class="contact__link link">
+                                <svg class="contact__icon" width="16px" height="12px">
+                                    <use href="./images/icons.svg#icon-mail"></use>
+                                </svg>
+                                info@devstudio.com</a>
                         </li>
-                        <li class="menu__item">
-                            <a href="./portfolio.html" class="menu__link menu__link--current link">Портфолио</a>
-                        </li>
-                        <li class="menu__item">
-                            <a href="" class="menu__link link">Контакты</a>
+                        <li class="contact__item">
+                            <a href="callto:+380961111111" class="contact__link link">
+                                <svg class="contact__icon" width="10px" height="16px">
+                                    <use href="./images/icons.svg#icon-phone"></use>
+                                </svg>
+                                +38 096 111 11 11</a>
                         </li>
                     </ul>
-                </nav>
-        
-                <ul class="contact list">
-                    <li class="contact__item">
-                        <a href="mailto:info@devstudio.com" class="contact__link link">
-                            <svg class="contact__icon" width="16px" height="12px">
-                                <use href="./images/icons.svg#icon-mail"></use>
-                            </svg>
-                            info@devstudio.com</a>
-                    </li>
-                    <li class="contact__item">
-                        <a href="callto:+380961111111" class="contact__link link">
-                            <svg class="contact__icon" width="10px" height="16px">
-                                <use href="./images/icons.svg#icon-phone"></use>
-                            </svg>
-                            +38 096 111 11 11</a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+                    <button type="button" class="menu-open-btn btn"><svg class="menu-btn" width="40px" height="40px">
+                            <use href="./images/icons.svg#icon-menu-open"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="mob-menu is-hidden">
+                    <div class="mob-container">
+                        <div class="mob-menu-top">
+                            <button type="button" class="menu-close-btn btn">
+                                <svg class="menu-btn" width="40px" height="40px">
+                                    <use href="./images/icons.svg#icon-menu-close"></use>
+                                </svg>
+                            </button>
+                            <ul class="mob-menu__list list">
+                                <li class="mob-menu__item">
+                                    <a href="./index.html" class="mob-menu__link link">Студия</a>
+                                </li>
+                                <li class="mob-menu__item">
+                                    <a href="./portfolio.html" class="mob-menu__link link mob-menu__link--current">Портфолио</a>
+                                </li>
+                                <li class="mob-menu__item">
+                                    <a href="" class="mob-menu__link link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mob-menu-bottom">
+                            <a href="callto:+380961111111" class="mob-tel__link link">+38 096 111 11 11</a>
+                            <a href="mailto:info@devstudio.com" class="mob-mail__link link">info@devstudio.com</a>
+                            <ul class="mob-soc__list list">
+                                <li class="mob-soc__item">
+                                    <a href="" class="mob-soc__link link">Instagram</a>
+                                </li>
+                                <li class="mob-soc__item">
+                                    <a href="" class="mob-soc__link link">Twitter</a>
+                                </li>
+                                <li class="mob-soc__item">
+                                    <a href="" class="mob-soc__link link">Facebook</a>
+                                </li>
+                                <li class="mob-soc__item">
+                                    <a href="" class="mob-soc__link link">Linkedin</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </header>
     <main>
         <section class="section">
             <div class="container">
@@ -72,7 +116,23 @@
                <li class="project__item">
                 <a href="" class="project__link link">
                     <div class="project__thumb">
-                        <img src="./images/portfolio-pic-1.jpg" alt="Логотип Технокряк" width="370" height="294">
+                        <picture>
+                            <source srcset="
+                                                            ./images/portfolio-pic-1.jpg 1x,
+                                                            ./images/portfolio-pic-1-2x.jpg 2x
+                                                            " media="(min-width: 1200px)" />
+                            <source srcset="
+                                                            ./images/portfolio-pic-1-tab.jpg 1x,
+                                                            ./images/portfolio-pic-1-tab-2x.jpg 2x
+                                                            " media="(min-width: 768px)" />
+                            <source srcset="
+                                                            ./images/portfolio-pic-1-mob.jpg 1x,
+                                                            ./images/portfolio-pic-1-mob-2x.jpg 2x
+                                                             " media="(min-width: 480px)" />
+
+                            <img src="./images/portfolio-pic-1.jpg" alt="Логотип Технокряк" width="370" height="294">
+                        </picture>
+                        
                         <div class="project__overlay">
                             <p class="project__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                         </div>
@@ -86,7 +146,23 @@
                <li class="project__item">
                 <a href="" class="project__link link">
                    <div class="project__thumb">
-                    <img src="./images/portfolio-pic-2.jpg" alt="Постер New Orlean vs Golden Star" width="370" height="294">
+                    <picture>
+                        <source srcset="
+                                                        ./images/portfolio-pic-2.jpg 1x,
+                                                        ./images/portfolio-pic-2-2x.jpg 2x
+                                                        " media="(min-width: 1200px)" />
+                        <source srcset="
+                                                        ./images/portfolio-pic-2-tab.jpg 1x,
+                                                        ./images/portfolio-pic-2-tab-2x.jpg 2x
+                                                        " media="(min-width: 768px)" />
+                        <source srcset="
+                                                        ./images/portfolio-pic-2-mob.jpg 1x,
+                                                        ./images/portfolio-pic-2-mob-2x.jpg 2x
+                                                         " media="(min-width: 480px)" />
+
+                        <img src="./images/portfolio-pic-2.jpg" alt="Постер New Orlean vs Golden Star" width="370" height="294">
+                    </picture>
+                    
                     <div class="project__overlay">
                         <p class="project__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                             Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -101,7 +177,24 @@
                 <li class="project__item">
                     <a href="" class="project__link link">
                     <div class="project__thumb">
-                        <img src="./images/portfolio-pic-3.jpg" alt="Логотип Ресторана Seafood" width="370" height="294">
+                        <picture>
+                            <source srcset="
+                                                            ./images/portfolio-pic-3.jpg 1x,
+                                                            ./images/portfolio-pic-3-2x.jpg 2x
+                                                            " media="(min-width: 1200px)" />
+                            <source srcset="
+                                                            ./images/portfolio-pic-3-tab.jpg 1x,
+                                                            ./images/portfolio-pic-3-tab-2x.jpg 2x
+                                                            " media="(min-width: 768px)" />
+                            <source srcset="
+                                                            ./images/portfolio-pic-3-mob.jpg 1x,
+                                                            ./images/portfolio-pic-3-mob-2x.jpg 2x
+                                                             " media="(min-width: 480px)" />
+
+                            <img src="./images/portfolio-pic-3.jpg" alt="Логотип Ресторана Seafood" width="370" height="294">
+                        </picture>
+
+                        
                         <div class="project__overlay">
                             <p class="project__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                 Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -116,7 +209,22 @@
                 <li class="project__item">
                     <a href="" class="project__link link">
                     <div class="project__thumb">
-                        <img src="./images/portfolio-pic-4.jpg" alt="Логотип Проекта Prime" width="370" height="294">
+                        <picture>
+                                <source srcset="
+                                                                ./images/portfolio-pic-4.jpg 1x,
+                                                                ./images/portfolio-pic-4-2x.jpg 2x
+                                                                " media="(min-width: 1200px)" />
+                                <source srcset="
+                                                                ./images/portfolio-pic-4-tab.jpg 1x,
+                                                                ./images/portfolio-pic-4-tab-2x.jpg 2x
+                                                                " media="(min-width: 768px)" />
+                                <source srcset="
+                                                                ./images/portfolio-pic-4-mob.jpg 1x,
+                                                                ./images/portfolio-pic-4-mob-2x.jpg 2x
+                                                                 " media="(min-width: 480px)" />
+                            <img src="./images/portfolio-pic-4.jpg" alt="Логотип Проекта Prime" width="370" height="294">
+                        </picture>
+                        
                         <div class="project__overlay">
                             <p class="project__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                 Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -131,7 +239,22 @@
                 <li class="project__item">
                     <a href="" class="project__link link">
                     <div class="project__thumb">
-                        <img src="./images/portfolio-pic-5.jpg" alt="Логотип Проекта Boxes" width="370" height="294">
+                        <picture>
+                                <source srcset="
+                                                                ./images/portfolio-pic-5.jpg 1x,
+                                                                ./images/portfolio-pic-5-2x.jpg 2x
+                                                                " media="(min-width: 1200px)" />
+                                <source srcset="
+                                                                ./images/portfolio-pic-5-tab.jpg 1x,
+                                                                ./images/portfolio-pic-5-tab-2x.jpg 2x
+                                                                " media="(min-width: 768px)" />
+                                <source srcset="
+                                                                ./images/portfolio-pic-5-mob.jpg 1x,
+                                                                ./images/portfolio-pic-5-mob-2x.jpg 2x
+                                                                 " media="(min-width: 480px)" />
+                            <img src="./images/portfolio-pic-5.jpg" alt="Логотип Проекта Boxes" width="370" height="294">
+                        </picture>
+                        
                         <div class="project__overlay">
                             <p class="project__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                 Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -146,7 +269,23 @@
                 <li class="project__item">
                     <a href="" class="project__link link">
                     <div class="project__thumb">
-                        <img src="./images/portfolio-pic-6.jpg" alt="Логотип Inspiration has no Borders" width="370" height="294">
+                        <picture>
+                                <source srcset="
+                                                                ./images/portfolio-pic-6.jpg 1x,
+                                                                ./images/portfolio-pic-6-2x.jpg 2x
+                                                                " media="(min-width: 1200px)" />
+                                <source srcset="
+                                                                ./images/portfolio-pic-6-tab.jpg 1x,
+                                                                ./images/portfolio-pic-6-tab-2x.jpg 2x
+                                                                " media="(min-width: 768px)" />
+                                <source srcset="
+                                                                ./images/portfolio-pic-6-mob.jpg 1x,
+                                                                ./images/portfolio-pic-6-mob-2x.jpg 2x
+                                                                 " media="(min-width: 480px)" />
+
+                            <img src="./images/portfolio-pic-6.jpg" alt="Логотип Inspiration has no Borders" width="370" height="294">
+                        </picture>
+                        
                         <div class="project__overlay">
                             <p class="project__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                 Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -161,7 +300,23 @@
                 <li class="project__item">
                     <a href="" class="project__link link">
                     <div class="project__thumb">
-                        <img src="./images/portfolio-pic-7.jpg" alt="Логотип Издания Limited Edition" width="370" height="294">
+                        <picture>
+                                <source srcset="
+                                                                ./images/portfolio-pic-7.jpg 1x,
+                                                                ./images/portfolio-pic-7-2x.jpg 2x
+                                                                " media="(min-width: 1200px)" />
+                                <source srcset="
+                                                                ./images/portfolio-pic-7-tab.jpg 1x,
+                                                                ./images/portfolio-pic-7-tab-2x.jpg 2x
+                                                                " media="(min-width: 768px)" />
+                                <source srcset="
+                                                                ./images/portfolio-pic-7-mob.jpg 1x,
+                                                                ./images/portfolio-pic-7-mob-2x.jpg 2x
+                                                                 " media="(min-width: 480px)" />
+
+                            <img src="./images/portfolio-pic-7.jpg" alt="Логотип Издания Limited Edition" width="370" height="294">
+                        </picture>
+                        
                         <div class="project__overlay">
                             <p class="project__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                 Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -176,7 +331,23 @@
                 <li class="project__item">
                     <a href="" class="project__link link">
                     <div class="project__thumb">
-                        <img src="./images/portfolio-pic-8.jpg" alt="Логотип Проект LAB" width="370" height="294">
+                        <picture>
+                            <source srcset="
+                                                            ./images/portfolio-pic-8.jpg 1x,
+                                                            ./images/portfolio-pic-8-2x.jpg 2x
+                                                            " media="(min-width: 1200px)" />
+                            <source srcset="
+                                                            ./images/portfolio-pic-8-tab.jpg 1x,
+                                                            ./images/portfolio-pic-8-tab-2x.jpg 2x
+                                                            " media="(min-width: 768px)" />
+                            <source srcset="
+                                                            ./images/portfolio-pic-8-mob.jpg 1x,
+                                                            ./images/portfolio-pic-8-mob-2x.jpg 2x
+                                                             " media="(min-width: 480px)" />
+
+                            <img src="./images/portfolio-pic-8.jpg" alt="Логотип Проект LAB" width="370" height="294">
+                        </picture>
+                        
                         <div class="project__overlay">
                             <p class="project__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                 Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -191,7 +362,28 @@
                 <li class="project__item">
                     <a href="" class="project__link link">
                     <div class="project__thumb">
-                        <img src="./images/portfolio-pic-9.jpg" alt="Логотип Growing Business" width="370" height="294">
+                        <picture>
+                            <source srcset="
+                                ./images/portfolio-pic-9.jpg 1x,
+                                ./images/portfolio-pic-9-2x.jpg 2x
+                                "
+                                media="(min-width: 1200px)" />
+                            <source
+                                srcset="
+                                ./images/portfolio-pic-9-tab.jpg 1x,
+                                ./images/portfolio-pic-9-tab-2x.jpg 2x
+                                "
+                                media="(min-width: 768px)" />
+                            <source
+                                srcset="
+                                ./images/portfolio-pic-9-mob.jpg 1x,
+                                ./images/portfolio-pic-9-mob-2x.jpg 2x
+                                 "
+                                media="(min-width: 480px)" />
+
+                            <img src="./images/portfolio-pic-9.jpg" alt="Логотип Growing Business" width="370" height="294">
+                        </picture>
+                        
                         <div class="project__overlay">
                             <p class="project__description">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
                                 Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
@@ -208,7 +400,7 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-container">
             <div class="address-container">
                 <a lang="en" href="./index.html" class="logo bottom link ">Web<span class="logo-bottom">Studio</span></a>
                 <address class="address">
