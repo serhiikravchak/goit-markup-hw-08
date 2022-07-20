@@ -8,15 +8,27 @@
 
 
 .teammate {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;    
+
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+       
 }
 
 .teammate__item {
     width: 100%;
     background-color: var(--main-white-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include mobile-max {
+        margin-bottom: 30px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
 
     @include tablet {
         width: calc((100% - 30px)/2);

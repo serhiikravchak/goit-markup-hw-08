@@ -204,10 +204,7 @@
 
 
 .check-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    display: inline-block;
     margin-bottom: 30px;
     font-size: 12px;
     line-height: 1.16;
@@ -215,6 +212,9 @@
 
     
     @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 14px;
         line-height: 1.71;
     }
@@ -222,9 +222,7 @@
 }
 
 .check-border {
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    
     width: 16px;
     height: 15px;
     border: 2px solid var(--title-text-color);
@@ -243,7 +241,14 @@
             .privacy-check:focus+.check-text & {
                 border-color: var(--accent-color);
                         }
+
+    @include desktop {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
 }
+
 
 .check-icon {
     fill: transparent;
@@ -256,6 +261,7 @@
     color: var(--accent-color);
     font-size: 12px;
     line-height: 1.16;
+    letter-spacing: 0.03em;
 
     
     @include desktop {

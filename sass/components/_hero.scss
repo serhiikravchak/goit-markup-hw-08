@@ -5,14 +5,15 @@
     padding-bottom: 118px;
     margin-left: auto;
     margin-right: auto;
+    
 
     background-image:
         linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../../images/hero-img-mob.jpg);
+        url(../images/hero-img-mob.jpg);
     max-width: 100%;
-        max-width: 480px;
+     max-width: 480px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -25,7 +26,7 @@
                     linear-gradient(to right,
                         rgba(47, 48, 58, 0.4),
                         rgba(47, 48, 58, 0.4)),
-                    url(../../images/hero-img-mob-2x.jpg);
+                    url(../images/hero-img-mob-2x.jpg);
         }
 
     @include tablet {
@@ -34,7 +35,7 @@
                 linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
-                url(../../images/hero-img-tab.jpg);
+                url(../images/hero-img-tab.jpg);
 
                 @media (min-device-pixel-ratio: 2),
                     (-webkit-min-device-pixel-ratio: 2),
@@ -44,7 +45,7 @@
                             linear-gradient(to right,
                                 rgba(47, 48, 58, 0.4),
                                 rgba(47, 48, 58, 0.4)),
-                            url(../../images/hero-img-tab-2x.jpg);
+                            url(../images/hero-img-tab-2x.jpg);
                     }
     }
 
@@ -58,7 +59,7 @@
                 linear-gradient(to right,
                     rgba(47, 48, 58, 0.4),
                     rgba(47, 48, 58, 0.4)),
-                url(../../images/hero-img.jpg);
+                url(../images/hero-img.jpg);
                
                 @media (min-device-pixel-ratio: 2),
                     (-webkit-min-device-pixel-ratio: 2),
@@ -68,7 +69,7 @@
                             linear-gradient(to right,
                                 rgba(47, 48, 58, 0.4),
                                 rgba(47, 48, 58, 0.4)),
-                            url(../../images/hero-img-2x.jpg);
+                            url(../images/hero-img-2x.jpg);
                     }
     }
 
@@ -76,7 +77,7 @@
 }
 
 .hero__title {
-    width: 360px;
+    // width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
@@ -87,6 +88,10 @@
     line-height: 1.62;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @include tablet {
+        width: 360px;
+    }
 
     @include desktop{
         width: 696px;

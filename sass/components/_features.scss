@@ -1,13 +1,24 @@
 
 
-.features__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+.features__list {      
+    @include tablet{
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
 }
 
 .features__item {
     width: 100%;
+
+    @include mobile-max {
+        margin-bottom: 30px;
+        
+            &:last-child {
+                margin-bottom: 0;
+            }
+    }
 
     @include tablet {
             width: calc((100% - 30px)/2);
