@@ -90,7 +90,7 @@
 
 
 
-.project__item .container {
+.description-container {
     
     width: 100%;
     
@@ -101,14 +101,11 @@
     border-right: 1px solid #EEEEEE;
 
     @include tablet{
-        flex-basis: 354px;
+        
         flex-grow: 1;
     }
     
-    @include desktop{
-        flex-basis: 370px;
-        flex-grow: 1;
-    }
+   
 
 }
 
@@ -152,7 +149,9 @@
 }
 
 .project__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     box-shadow: none;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover,
