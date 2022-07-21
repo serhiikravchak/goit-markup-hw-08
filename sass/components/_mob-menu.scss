@@ -75,9 +75,7 @@
     
 }
 
-// .mob-menu__list {
-//     margin-top: 15px;
-// }
+
 .mob-menu__item{
     margin-bottom: 32px;
 
@@ -128,6 +126,7 @@
 
 .mob-soc__list{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .mob-soc__item {
